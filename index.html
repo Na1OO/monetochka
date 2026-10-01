@@ -58,15 +58,15 @@ h3{margin:12px 0 4px;font-size:1rem;color:var(--accent)}
   </div>
 </main>
 <script type="module">
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getDatabase,ref,push,update,remove,onValue} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 // ВСТАВЬ СЮДА конфиг из Firebase Console → Project settings → Your apps → Web app
-const firebaseConfig={
-  apiKey:"AIzaSyBNT6hqwX0lXIgpw_0r8tbL3Uad489mAjI",
-  authDomain:"monetochka-fbd20.firebaseapp.com",
-  databaseURL:"https://monetochka-fbd20-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId:"monetochka-fbd20",
+const firebaseConfig = {
+  apiKey: "AIzaSyBNT6hqwX0lXIgpw_0r8tbL3Uad489mAjI",
+  authDomain: "monetochka-fbd20.firebaseapp.com",
+  databaseURL: "https://monetochka-fbd20-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "monetochka-fbd20",
   storageBucket: "monetochka-fbd20.firebasestorage.app",
   messagingSenderId: "1081193532542",
   appId: "1:1081193532542:web:eb98b4982e15faed4adc2f",

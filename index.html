@@ -82,7 +82,6 @@ onValue(ref(db,"debts"),s=>{
   debts=Object.entries(v).map(([id,d])=>({id,returned:null,...d}));
   render();
 },e=>{$("total").textContent="Нет доступа к базе: "+e.message});
-render();
 const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 const fmt=n=>Number(n).toLocaleString("ru-RU")+" ₽";
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -134,6 +133,7 @@ function renderDay(){
   q("data-ret").forEach(b=>b.onclick=()=>update(R(b.dataset.ret),{returned:sel}));
   q("data-undo").forEach(b=>b.onclick=()=>update(R(b.dataset.undo),{returned:null}));
 }
+render();
 </script>
 </body>
 </html>
